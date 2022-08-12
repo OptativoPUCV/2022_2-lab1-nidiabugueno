@@ -221,3 +221,9 @@ exercises.c:21:5: note: declared here
       |     ^~~~~
 Compilation failed
 a12dc14
+Fri 12 Aug 2022 05:32:12 PM UTC: 
+ exercises.c | 1 -
+ 1 file changed, 1 deletion(-)
+ tests:  1|6
+total_score: 10/70
+7409536
