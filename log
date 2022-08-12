@@ -8,3 +8,44 @@ Fri 12 Aug 2022 04:43:43 PM UTC:
  tests:  1|6
 total_score: 10/70
 3c1a78a
+Fri 12 Aug 2022 05:22:23 PM UTC: 
+ exercises.c | 7 +++++++
+ 1 file changed, 7 insertions(+)
+In file included from test.c:5:
+exercises.c: In function ‘sumaNultimos’:
+exercises.c:42:14: error: expected expression before ‘int’
+   42 |   tot = suma(int a[], int n);
+      |              ^~~
+exercises.c:42:9: error: called object ‘suma’ is not a function or function pointer
+   42 |   tot = suma(int a[], int n);
+      |         ^~~~
+exercises.c:39:48: note: declared here
+   39 | void sumaNultimos(int a[], int n, int m, int * suma) {
+      |                                          ~~~~~~^~~~
+exercises.c:43:16: error: expected expression before ‘int’
+   43 |   resto = suma(int a[], int n) - suma(int a[], int m);
+      |                ^~~
+exercises.c:43:11: error: called object ‘suma’ is not a function or function pointer
+   43 |   resto = suma(int a[], int n) - suma(int a[], int m);
+      |           ^~~~
+exercises.c:39:48: note: declared here
+   39 | void sumaNultimos(int a[], int n, int m, int * suma) {
+      |                                          ~~~~~~^~~~
+exercises.c:43:39: error: expected expression before ‘int’
+   43 |   resto = suma(int a[], int n) - suma(int a[], int m);
+      |                                       ^~~
+exercises.c:43:34: error: called object ‘suma’ is not a function or function pointer
+   43 |   resto = suma(int a[], int n) - suma(int a[], int m);
+      |                                  ^~~~
+exercises.c:39:48: note: declared here
+   39 | void sumaNultimos(int a[], int n, int m, int * suma) {
+      |                                          ~~~~~~^~~~
+exercises.c:44:22: error: expected ‘;’ before ‘}’ token
+   44 |   *suma = tot - resto
+      |                      ^
+      |                      ;
+......
+   48 | }
+      | ~                     
+Compilation failed
+0200987
