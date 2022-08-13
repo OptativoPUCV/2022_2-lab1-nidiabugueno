@@ -307,3 +307,17 @@ Sat 13 Aug 2022 02:29:05 PM UTC:
  tests:  3|4
 total_score: 30/70
 288bc98
+Sat 13 Aug 2022 04:07:25 PM UTC: 
+ exercises.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:81:22: error: too few arguments to function ‘calloc’
+   81 |   Vector* v=(Vector*)calloc(n*sizeof(Vector));
+      |                      ^~~~~~
+In file included from test.c:2:
+/nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/stdlib.h:542:14: note: declared here
+  542 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+Compilation failed
+bc95b60
