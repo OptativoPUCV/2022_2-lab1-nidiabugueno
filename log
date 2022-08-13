@@ -245,3 +245,24 @@ Sat 13 Aug 2022 02:02:45 PM UTC:
  tests:  2|5
 total_score: 20/70
 a10bcb4
+Sat 13 Aug 2022 02:18:34 PM UTC: 
+ exercises.c | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearPersona’:
+exercises.c:62:4: error: array subscript ‘Persona[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   62 |   p->edad = edad;
+      |    ^~
+exercises.c:59:24: note: referencing an object of size 8 allocated by ‘malloc’
+   59 |   Persona* p=(Persona*)malloc(sizeof(Persona*));
+      |                        ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/string.h:519,
+                 from test.c:3:
+In function ‘strcpy’,
+    inlined from ‘crearPersona’ at exercises.c:61:3:
+/nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/bits/string_fortified.h:79:10: error: ‘__builtin___strcpy_chk’ offset 30 is out of the bounds [0, 8] [-Werror=array-bounds]
+   79 |   return __builtin___strcpy_chk (__dest, __src, __glibc_objsize (__dest));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+535d427
