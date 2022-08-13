@@ -321,3 +321,17 @@ In file included from test.c:2:
       |              ^~~~~~
 Compilation failed
 bc95b60
+Sat 13 Aug 2022 05:22:05 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘crearVector’:
+exercises.c:81:24: error: too few arguments to function ‘calloc’
+   81 |   Vector* v = (Vector*)calloc(sizeof(Vector));
+      |                        ^~~~~~
+In file included from test.c:2:
+/nix/store/dwsi3wsqpqm0hpzdm9fsxc7q732p9xwi-glibc-2.34-210-dev/include/stdlib.h:542:14: note: declared here
+  542 | extern void *calloc (size_t __nmemb, size_t __size)
+      |              ^~~~~~
+Compilation failed
+8649496
