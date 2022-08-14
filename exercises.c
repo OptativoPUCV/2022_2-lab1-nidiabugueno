@@ -66,7 +66,7 @@ Persona* crearPersona(char nombre[], char rut[], int edad) {
 
 /*
 Ejercicio 4.
-Considerando la estructura "Vector", escriba 
+SSConsiderando la estructura "Vector", escriba 
 la función Vector* crearVector(int n), la cual crea 
 un vector con capacidad `n`, reserva la memoria 
 correspondiente para el arreglo con `n` datos 
