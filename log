@@ -395,3 +395,13 @@ exercises.c:100:4: error: array subscript is not an integer
       |    ^
 Compilation failed
 ae605bf
+Sun 14 Aug 2022 01:51:18 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘asignarValor’:
+exercises.c:100:4: error: array subscript is not an integer
+  100 |   a[v->datos] = valor;
+      |    ^
+Compilation failed
+2bc7e4f
