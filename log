@@ -489,3 +489,13 @@ Sun 14 Aug 2022 02:43:25 PM UTC:
  tests:  4|3
 total_score: 40/70
 f715408
+Sun 14 Aug 2022 02:45:50 PM UTC: 
+ exercises.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘asignarValor’:
+exercises.c:100:4: error: array subscript is not an integer
+  100 |   a[v->datos] = valor;
+      |    ^
+Compilation failed
+e62d177
