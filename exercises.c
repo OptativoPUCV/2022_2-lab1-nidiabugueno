@@ -93,7 +93,7 @@ la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
   int *a;
-  a = (float *) calloc(v->capacidad + 1, sizeof(int));
+  a = (int *) calloc(v->capacidad + 1, sizeof(int));
   for(i=0; i < v-> capacidad ; ++i){
     a[i] = v->datos[i];
   }
