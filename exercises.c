@@ -38,7 +38,7 @@ Utilice la función sumaN.
 
 void sumaNultimos(int a[], int n, int m, int * suma) {
 
-*suma = sumaN(a, n) - sumaN(a, n-m);
+*suma = sumaN(a, n) - sumaN(a, n-m); //para obtener lo que nos piden, restamos n-m del total para obtener lo que nos piden.
 }
 
 /*
@@ -57,7 +57,7 @@ typedef struct {
 
 Persona* crearPersona(char nombre[], char rut[], int edad) {
   Persona* p=(Persona*)malloc(sizeof(Persona));
-  strcpy(p->nombre,nombre);
+  strcpy(p->nombre,nombre); // como ambos son de tipo char, lo almacenamos en la función strcpy
   strcpy(p->rut,rut);
   p->edad = edad;
   
@@ -79,8 +79,10 @@ typedef struct {
 
 Vector* crearVector(int n) {
   Vector *array = NULL;
-  array = (Vector *) malloc(sizeof(Vector));
-  array -> datos = (int *)calloc(n,(sizeof(int)));
+  
+  array = (Vector *) malloc(sizeof(Vector)); //primero reservamos memoria
+  
+  array -> datos = (int *)calloc(n,(sizeof(int))); // con la función calloc inicializamos los valores en cero.
   array-> capacidad = n;
   return array;
   
@@ -92,7 +94,7 @@ Programe la función void asignarValor(Vector * v, int i, int valor),
 la cual asigna el valor a la posición i del vector v.
 */
 void asignarValor(Vector * v, int i, int valor) {
-  v->datos[i] = valor;
+  v->datos[i] = valor; // de esta manera en cada posición de los datos, se le asignará un valor.
 }
 
 /*
@@ -102,7 +104,7 @@ la cual retorna el valor en la posición i del vector v.
 */
 int obtenerValor(Vector * v, int i) {
   
-   return v->datos[i];
+   return v->datos[i]; // como anteriormente esto era lo que nos pedían, de esta misma manera lo retornamos.
 }
 
 /*
@@ -111,9 +113,9 @@ Función que suma los vectores `a` y `b` y
 actualiza el vector `c` con el resultado de la suma.
 */
 void sumaV(Vector * a, Vector * b, Vector * c) {
-  for (int i= 0 ; i < 3 ; i++){
+  for (int i= 0 ; i < 3 ; i++){ //hacemos un for hasta 3, eran 3 elementos.
     
-    c->datos[i] = a ->datos[i] + b->datos[i];
+    c->datos[i] = a ->datos[i] + b->datos[i]; // sumamos los datos y los almacenamos en c.
     
   }
 
@@ -125,9 +127,9 @@ Use las operaciones implementadas de vectores para
 sumar (a1,a2)+(b1+b2). Almacene el resultado en el vector c.
 */
 void sumaV2(int a1, int a2, int b1, int b2, Vector *c){
-  int i = 0;
+  int i = 0;  //inicializamos el contador
   
-  c-> datos[i] = ( a1 + b1 );
+  c-> datos[i] = ( a1 + b1 ); //como anteriormente, sumamos los valores y lo almacenamos en c.
   
   i++ ;
   
